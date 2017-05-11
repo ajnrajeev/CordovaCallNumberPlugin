@@ -4,7 +4,7 @@
 @implementation CFCallNumber
 
 + (BOOL)available {
-    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:number]];
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]];
 }
 
 - (void) callNumber:(CDVInvokedUrlCommand*)command {

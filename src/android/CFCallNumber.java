@@ -39,7 +39,7 @@ public class CFCallNumber extends CordovaPlugin {
         getCallPermission(CALL_REQ_CODE);
       }
     } else if (action.equals("isCallSupported")) {
-      callbackContext.success(isTelephonyEnabled());
+        this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, isTelephonyEnabled()));
     } else {
       return false;
     }
